@@ -6,7 +6,6 @@
 int xDat = 10; int yDat = yKhungLong + hKhungLong;
 char ground[3][sl_ground + 1];
 int jump = 14; bool kt_jump = false;
-
 void TaoDat(int i){
 	int v = rand() % (15 - 1 + 1) + 1;// [1,15]
 	switch (v){
@@ -69,16 +68,13 @@ void VeMatDat(){
 		cout << ground[i];
 	}
 }
-void DiChuyenDat()
-{
 
-	for (int i = 0; i < sl_ground - 1; i++)
-	{
+void DiChuyenDat(){
+	for (int i = 0; i < sl_ground - 1; i++){
 		ground[1][i] = ground[1][i + 1];
 		ground[2][i] = ground[2][i + 1];
 	}
 
 	TaoDat(sl_ground - 1);
-
 	VeMatDat();
 }

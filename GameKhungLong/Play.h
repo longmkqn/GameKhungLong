@@ -19,8 +19,7 @@ void Play(){
 	//check = 1 thi di len
 	//check = 2 thi dung im
 	int check = 2;
-	while (true)
-	{
+	while (true){
 		gotoXY(50, 1);
 		cout << "Score: " << score++;
 		if (count == 0)
@@ -34,16 +33,12 @@ void Play(){
 			VeKhungLong(x, y);
 		}
 		di_chuyen_tree(t, nt);
-		if (GameOver(x, y, t, nt) == true)
-		{
+		if (GameOver(x, y, t, nt) == true){
 			break;
-		}
-		
+		}	
 		DiChuyenDat();
-
 		//------- dieu khien --------
-		if (_kbhit())
-		{
+		if (_kbhit()){
 			char c = _getch();
 			if (c == -32)
 			{
